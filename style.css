@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(./imgs/spotifyBack.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img {
+    width: 600px;
+    height: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(122, 122, 122);
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    transition: all .3s ease;
+}
+
+h1 {
+    margin: 40px;
+    font-size: 36px;
+    color: white;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.contenedor-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+    gap: 20px;
+}
+
+input {
+    width: 60%;
+    height: 48px;
+    border-radius: 28px;
+    border: none;
+    background-color: white;
+    padding: 20px;
+    font-size: 18px;
+    outline: none;
+    transition: all .3s ease;
+}
+
+input:focus {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+::placeholder {
+    color: rgb(122, 122, 122)
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border-radius: 16px;
+    border: none;
+    background-color: #F1D492;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all .3s ease;
+}
+
+button:hover {
+    background-color: #f1d49279;
+    transform: translateY(-4px);
+}
+
+#iframe {
+    display: none;
+    margin-bottom: 40px;
+    width: 60%;
+}
+
+.download {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    border: none;
+    background-color: #F1D492;
+    cursor: pointer;
+    transition: all .3s ease;
+    margin-bottom: 40px;
+}
+
+.download:hover {
+    background-color: #f1d49279;
+    transform: translateY(-4px);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+
+/* media queries */
+
+@media (max-width: 768px) {
+    input {
+        width: 80%;
+    }
+}
+
+@media (max-width: 425px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    input {
+        width: 70%;
+        font-size: 14px;
+    }
+
+    .contenedor-input {
+        gap: 10px;
+    }
+
+    .download {
+        width: 50px;
+        height: 50px;
+    }
+
+    #iframe {
+        width: 90%;
+    }
+}
+
+@media (max-width: 375px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    input {
+        width: 75%;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    input {
+        width: 70%;
+    }
+
+    .contenedor-input {
+        gap: 6px;
+    }
+}
