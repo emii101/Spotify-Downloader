@@ -11,8 +11,14 @@ const options = {
     }
 };
 
+function extractSpotifyTrackId(url) {
+    const regex = /\/track\/([a-zA-Z0-9]+)/;
+    const match = url.match(regex);
+    return match ? match[1] : null;
+}
+
 function searchSong() {
-    let song = input.value.slice(39, 61);
+    let song = extractSpotifyTrackId(input.value);
     iframe.src = `https://open.spotify.com/embed/track/${song}?utm_source=generator`;
     iframe.style.display = 'block';
 
